@@ -1,0 +1,303 @@
+/* ==UserStyle==
+@name           YT Dark (no autoplay button, for DARK mode)
+@namespace      USO Archive
+@author         apkx
+@description    `Custom dark theme for YouTube`
+@version        0.41
+@license        CC-BY-4.0
+@preprocessor   uso
+==/UserStyle== */
+@-moz-document regexp("http(s?)://[^/]*\\.youtube(\\.com)?(\\.[a-z][a-z])?/.*") {
+    html:not(.style-scope)[dark],
+    :not(.style-scope)[dark] {
+        --yt-spec-brand-background-primary: #282828;
+        --yt-spec-brand-background-secondary: rgb(40, 40, 40);
+        --yt-spec-error-background: #f9f9f9;
+        --yt-spec-text-primary: #D5CFC4;
+        --yt-spec-text-primary-inverse: #807C74;
+        --yt-spec-call-to-action: #C0E89E;
+        --yt-spec-icon-active-other: #6FB982;
+        --yt-spec-icon-inactive: #A9BE98 --yt-spec-brand-icon-inactive: #A9BE98;
+        --yt-spec-icon-disabled: #606060;
+        --yt-spec-suggested-action: #252525;
+        --yt-spec-button-chip-background-hover: rgb(40, 40, 40);
+        --yt-spec-touch-response: #fff;
+        --yt-spec-paper-tab-ink: rgb(60, 60, 60);
+        --yt-spec-filled-button-text: #030303;
+        --yt-spec-brand-button-background: #ff5555;
+        --yt-spec-brand-link-text: #ff5555;
+        --yt-spec-filled-button-focus-outline: rgba(255, 255, 255, 0.7);
+        --yt-spec-call-to-action-button-focus-outline: rgba(62, 166, 255, 0.3);
+        --yt-spec-brand-text-button-focus-outline: rgba(255, 78, 69, 0.3);
+        --yt-spec-inactive-text-button-focus-outline: #606060;
+        --yt-spec-ad-indicator: #00aaa7;
+        --yt-spec-brand-subscribe-button-background: var(--yt-spec-brand-button-background);
+        --yt-spec-wordmark-text: #fff;
+        --yt-spec-10-percent-layer: rgb(26, 26, 26);
+        --yt-spec-selected-nav-text: #fff;
+        --yt-spec-themed-blue: #ff5555;
+        --yt-spec-themed-green: #50fa7b;
+        --yt-spec-themed-overlay-background: rgb(40, 40, 40);
+        --ytd-searchbox-background: #222;
+        --yt-spec-base-background: #202020;
+        --yt-spec-menu-background: #333;
+        --yt-spec-static-overlay-touch-response: #6FB982;
+        --yt-spec-badge-chip-background: #282828;
+    }
+    html[darker-dark-theme][dark] #home-container-skeleton {
+        background-color: var(--yt-spec-base-background);
+    }
+    html[dark] #home-page-skeleton .skeleton-bg-color {
+        background-color: var(--yt-spec-brand-background-primary);
+    }
+    html[darker-dark-theme][dark] #guide-skeleton {
+        background-color: var(--yt-spec-brand-background-primary);
+    }
+    html[darker-dark-theme][dark] #home-chips {
+        background-color: var(--yt-spec-base-background);
+    }
+    ytd-masthead {
+        --paper-input-container-input-align: baseline;
+        display: block;
+        width: 100%;
+        background: var(--yt-spec-brand-background-primary);
+    }
+    paper-toggle-button[checked]:not([disabled]) .toggle-bar.paper-toggle-button {
+        opacity: 1;
+        background-color: #323232;
+    }
+    .html5-video-player {
+        background-color: #000!important;
+    }
+    #container.ytd-searchbox,
+    #search-icon-legacy.ytd-searchbox,
+    #search-icon-legacy.ytd-searchbox:hover,
+    .sbdd_b {
+        border: 1px solid #4D5A43;
+    }
+    .yt-spec-icon-badge-shape--style-overlay .yt-spec-icon-badge-shape__icon {
+        color: #A9BE98;
+    }
+    ytd-shorts[cinematic-enabled][cinematic-scrim-enabled][is-dark] #cinematic-shorts-scrim.ytd-shorts {
+        background: none;
+    }
+    ytd-download-button-renderer {
+        display: none;
+    }
+    div#flexible-item-buttons > ytd-button-renderer:nth-child(2):nth-last-child(2) {
+        display: none !important;
+    }
+    .ytp-button[data-tooltip-target-id="ytp-autonav-toggle-button"] {
+        display: none !important;
+    }
+    .sbsb_a,
+    .sbsb_b,
+    .sbsb_c,
+    .sbfl_b,
+    .sbfl_a,
+    .gsfs {
+        color: #F1E5CE;
+        background-color: #505050;
+    }
+    .sbpqs_a:before,
+    .sbqs_c:before {
+        filter: invert(1);
+    }
+    .sbsb_c:hover,
+    .sbsb_d {
+        background: #53A86447;
+        cursor: pointer;
+        border-radius: 12px;
+    }
+    .sbfl_a:hover,
+    .sbfl_b:hover {
+        background: transparent!important;
+        border: 0px solid #fff;
+    }
+    #search-icon-legacy.ytd-searchbox:hover {
+        background-color: #53A86475;
+    }
+    .yt-spec-button-shape-next--icon-only-default {
+        color: #6FB982!important;
+    }
+    .guide-entry-badge.ytd-guide-entry-renderer {
+        color: var(--yt-spec-brand-link-text);
+    }
+    #progress.ytd-thumbnail-overlay-resume-playback-renderer {
+        background-color: var(--yt-spec-themed-blue);
+    }
+    #notification-count.ytd-notification-topbar-button-renderer {
+        background-color: var(--yt-spec-themed-blue);
+    }
+    ytd-notification-renderer {
+        background: #333;
+    }
+    .yt-core-attributed-string__link--call-to-action-color,
+    .yt-spec-button-shape-next--call-to-action.yt-spec-button-shape-next--text,
+    .yt-spec-button-shape-next--call-to-action.yt-spec-button-shape-next--outline {
+        color: #ABC891!important;
+    }
+    #inline-survey-compact-video-renderer.ytd-inline-survey-renderer {
+        background: #404040!important;
+    }
+    #author-text.yt-simple-endpoint.ytd-comment-renderer {
+        color: #FFE4B0;
+    }
+    .ytd-guide-renderer {
+        background: #282828!important;
+    }
+    .ytd-rich-item-renderer ytd-rich-grid-media {
+        background: #282828;
+    }
+    #dismissible.ytd-inline-survey-renderer,
+    .ytd-search-suggestion-report-dialog,
+    tp-yt-paper-dialog[modern] {
+        background: #282828;
+    }
+    .style-scope.ytd-badge-supported-renderer {
+        color: #FFC34A;
+    }
+    #text-container,
+    .ytd-channel-name {
+        color: #B1DB8A!important;
+    }
+    a.yt-simple-endpoint.yt-formatted-string {
+        color: #C0D7AA!important;
+    }
+    ytd-shelf-renderer[modern-typography] #title.ytd-shelf-renderer {
+        font-size: 1.8rem;
+        line-height: 2.5rem;
+        font-weight: 500;
+        color: #C6B595;
+    }
+    #video-title.ytd-video-renderer {
+        font-size: 1.9rem;
+        line-height: 2.2rem;
+        font-weight: 400;
+    }
+    h1.ytd-watch-metadata {
+        word-break: break-word;
+        font-size: 1.9rem;
+        line-height: 2.0rem;
+        font-weight: 600;
+    }
+    #container.ytd-searchbox input.ytd-searchbox {
+        color: #FDE3AD;
+    }
+    #expand.ytd-text-inline-expander,
+    #collapse.ytd-text-inline-expander,
+    ytd-search-suggestion-report-dialog {
+        color: #E8CF9F;
+    }
+    .yt-spec-icon-badge-shape--type-notification .yt-spec-icon-badge-shape__badge {
+        background-color: #A1F758;
+        color: #000;
+    }
+    .guide-entry-badge.style-scope {
+        color: #50fa7b;
+    }
+    #newness-dot.ytd-guide-entry-renderer {
+        background-color: #50fa7b;
+    }
+    yt-icon#logo-icon,
+    #icon.ytd-rich-shelf-renderer,
+    .guide-icon.ytd-guide-entry-renderer,
+    #icon.ytd-reel-shelf-renderer {
+        filter: contrast(50%);
+    }
+    .style-scope.ytd-badge-supported-renderer {
+        filter: saturate(50%);
+    }
+    ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton,
+    div#player-theater-container.style-scope.ytd-watch-flexy,
+    div#columns.style-scope.ytd-watch-flexy,
+    div#primary.style-scope.ytd-watch-flexy,
+    #cinematics {
+        background: #181818!important;
+    }
+    #cinematics {
+        mix-blend-mode: lighten!important;
+    }
+    ytd-item-section-renderer#sections.style-scope.ytd-comments,
+    div#contents.style-scope.ytd-item-section-renderer,
+    div#simple-box.style-scope.ytd-comments-header-renderer,
+    .ytd-rich-item-renderer {
+        border-radius: 12px;
+    }
+    div#simple-box.style-scope.ytd-comments-header-renderer {
+        background: #232323!important;
+    }
+    div#simple-box.style-scope.ytd-comments-header-renderer {
+        padding: 12px;
+    }
+    .ytd-rich-item-renderer {
+        padding: 2px;
+    }
+    ytd-comments-header-renderer,
+    ytd-comment-thread-renderer {
+        padding-top: 8px;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+    ytd-expandable-metadata-renderer[round-container]:not([is-expanded]) {
+        background: #525252;
+    }
+    ytd-expandable-metadata-renderer[round-container],
+    div#contents.style-scope.ytd-item-section-renderer,
+    ytd-item-section-renderer[static-comments-header] #header.ytd-item-section-renderer,
+    div#dismissible.style-scope.ytd-shelf-renderer,
+    #card.yt-live-chat-viewer-engagement-message-renderer,
+    #contents.ytd-section-list-renderer,
+    ytd-engagement-panel-section-list-renderer,
+    .ytd-engagement-panel-section-list-renderer,
+    .ytd-add-to-playlist-renderer,
+    #footer.yt-clip-creation-renderer {
+        background: #222;
+    }
+    .ytd-menu-renderer,
+    #checkboxContainer.tp-yt-paper-checkbox,
+    yt-icon.style-scope.ytd-add-to-playlist-renderer {
+        color: #88837A;
+    }
+    yt-icon.style-scope.ytd-add-to-playlist-renderer:hover {
+        color: #50fa7b;
+    }
+    yt-live-chat-renderer {
+        background: #333;
+    }
+    yt-formatted-string.style-scope.ytd-reel-player-header-renderer,
+    yt-formatted-string.style-scope.style-scope.ytd-channel-name {
+        text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
+    }
+    html[dark] #ytc-filter .vc-container,
+    .dark-mode #ytc-filter .vc-container {
+        color: #D9E2EA;
+        background-color: #222;
+    }
+    #time.ytd-macro-markers-list-item-renderer,
+    #contents.ytd-macro-markers-list-renderer {
+        background: #333;
+        color: #C0E89E!important;
+        text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
+    }
+    .ytp-gradient-top,
+    .ytp-gradient-bottom {
+        height: 0px;
+        padding-top: 0;
+        bottom: 0;
+        z-index: 0;
+        background-position: bottom;
+        background-repeat: repeat-x;
+        background-image: none;
+        -webkit-transition: none;
+        -o-transition: none;
+        transition: none;
+        pointer-events: none;
+    }
+    .ytp-chrome-controls,
+    .ytp-progress-bar {
+        filter: drop-shadow( 0.1rem 0px 2px #000);
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+}
