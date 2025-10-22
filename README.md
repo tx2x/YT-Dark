@@ -5,7 +5,7 @@ A custom dark theme for YouTube that reduces contrast and makes the interface ea
 ## Features
 
 - **Reduced Contrast**: Softer color palette designed to reduce eye strain
-- **Enhanced Player Text**: Bolder, more visible player controls with drop shadows
+- **Enhanced Player Text**: Bolder, more visible player controls with darker drop shadows
 - **Custom Color Scheme**: Carefully selected colors for improved visual comfort
 - **Optional Autoplay Button Removal**: Choose the version that fits your preferences
 
